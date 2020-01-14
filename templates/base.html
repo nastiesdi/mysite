@@ -12,96 +12,167 @@
     <title>{% block title %} Default title {% endblock title %}</title>
 </head>
 <body>
-    <h1>{% block header %} Block default {% endblock header %}</h1>
-    <div class="content">
-        <a>{% block content %}content{% endblock content %}</a>
-    </div>
-    <div>Footer</div>
-    <div class="wrap_content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              Доставка
-                <button type="button" class="btn btn-secondary">Secondary</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-              логотип
-            </div>
-            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-             <nav class='animated flipInX'>
-                  <ul>
-                    <li>
-                      <a href='#'>
-                        <div class='fa fa-home'></div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href='#'>
-                        About
-                      </a>
-                    </li>
-                    <li class='sub-menu'>
-                      <a href='#'>
-                        Products
-                        <i class='fa fa-angle-down'></i>
-                      </a>
-                      <ul>
-                        <li>
-                          <a href='#'>
-                            Product Item
-                          </a>
-                        </li>
-                        <li>
-                          <a href='#'>
-                            Product Item
-                          </a>
-                        </li>
-                        <li>
-                          <a href='#'>
-                            Product Item
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class='sub-menu'>
-                      <a href='#'>
-                        Services
-                        <i class='fa fa-angle-down'></i>
-                      </a>
-                      <ul>
-                        <li>
-                          <a href='#'>
-                            Product Item
-                          </a>
-                        </li>
-                        <li>
-                          <a href='#'>
-                            Product Item
-                          </a>
-                        </li>
-                        <li>
-                          <a href='#'>
-                            Product Item
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href='#'>
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-
-            </div>
-            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-              время
-            </div>
-          </div>
+<!--    <div class="modal fade" id="myModal" role="dialog">-->
+<!--        <div class="modal-dialog">-->
+<!--            &lt;!&ndash; Modal content&ndash;&gt;-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+<!--                    <h4 class="modal-title">SEARCH HERE</h4>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <div class="input-group">-->
+<!--                        <form method="get" class="searchform" action="/search" role="search">-->
+<!--                            <input type="hidden" name="type" value="product">-->
+<!--                            <input type="text" name="q" class="form-control control-search">-->
+<!--                            <span class="input-group-btn">-->
+<!--                              <button class="btn btn-default button_search" type="button"><i data-toggle="dropdown" class="ion-ios-search"></i></button>-->
+<!--                            </span>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <header>
+        <div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 header">
+               <div class="top">+375(44)501-48-98</div>
+           </div>
         </div>
-    </div>
+    </header>
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-3 logo">
+                        <img src="{% static 'img/logo.png' %}" alt="logo"  class="img-reponsive">
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-9 nextlogo">
+                        <div class="search">
+                            <form action="#" class="search-form">
+                                <input type="text" name="s" class="form-control" placeholder="Введите название или артикул">
+                                <button type="submit" class="search-icon"></button>
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-6 column-left">
+                        <aside id="column-left">
+                            <nav class="navbar-default">
+                                <div class="menu-heading js-nav-menu">Категории</div>
+                                <div class="vertical-wrapper js-dropdown-menu js-dropdown-open active">
+                                    <ul class="level0">
+                                        <li><a href="#">Вытяжки</a></li>
+                                        <li><a href="#">Духовые шкафы</a></li>
+                                        <li><a href="#">Микроволновые печи</a></li>
+                                        <li><a href="#">Холодильники</a></li>
+                                        <li><a href="#">Стиральные машины</a></li>
+                                        <li><a href="#">Телевизоры</a></li>
+                                        <li><a href="#">Кондиционеры</a></li>
+                                        <li><a href="#">Варочные панели</a></li>
+                                        <li><a href="#">Другое</a></li>
+                                        <li class="sub-form-li">
+                                            <div>
+                                                Свяжитесь со мной
+                                            </div>
+                                            <form action="#" class="sub-form">
+                                                <input type="text" name="e" class="form-control" placeholder="Номер телефона...">
+                                                <button type="submit" class="btn btn-sub"> Оставить заявку </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </aside>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-6 column-right">
+                        <div class="deal">
+                            <a href="#" class="btn-deal">Заказать звонок</a>
+                        </div>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="menu-title">MENU</span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="menubar js-menubar">
+                                <li class=" menu-homepage menu-item-has-child dropdown">
+                                    <a href="#" title="Главная"><i class="fa fa-home"></i>Главная</a>
+                                    <span class="plus js-plus-icon"></span>
+                                </li>
+                                <li class=" menu-demo-page menu-item-has-child dropdown">
+                                    <a href="#" title="Sellerdemo">Каталог</a>
+                                    <span class="plus js-plus-icon"></span>
+                                    <div class="dropdown-menu dropdown-menu-bg">
+                                        <ul class="level1">
+                                            <li class="sub-menu col-3">
+                                                <a href="#">Вытяжки</a>
+                                                <ul class="level2">
+                                                    <li class="col-inner"><a href="checkout-1.html" title="">Модель 1</a></li>
+                                                    <li class="col-inner"><a href="checkout-2.html" title="">Модель 2</a></li>
+                                                    <li class="col-inner"><a href="checkout-3.html" title="">Модель 3 </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-menu col-3">
+                                                <a href="#">Духовые шкафы</a>
+                                                <ul class="level2">
+                                                    <li class="col-inner"><a href="checkout-1.html" title="">Модель 1</a></li>
+                                                    <li class="col-inner"><a href="checkout-2.html" title="">Модель 2</a></li>
+                                                    <li class="col-inner"><a href="checkout-3.html" title="">Модель 3 </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </li>
+                                <li class="dropdown menu-contact-page menu-item-has-child">
+                                    <a href="#" title="ContactUs">Контакты</a>
+                                    <span class="plus js-plus-icon"></span>
+                                </li>
+                                <li class="dropdown menu-blog-page menu-item-has-child">
+                                    <a href="#" title="Blog">Доставка</a>
+                                    <span class="plus js-plus-icon"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <content>{% block content %}
+       <section class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-6"></div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="row top-row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div id="main">
+                                    <div class="slider">
+                                        <ul>
+                                            <li>
+                                                <img src="{% static 'img/slide1.jpg' %}" alt="logo"  class="img-reponsive">
+                                            </li>
+                                            <li>
+                                                <img src="{% static 'img/slide2.jpg' %}" alt="logo"  class="img-reponsive">
+                                            </li>
+                                            <li>
+                                                <img src="{% static 'img/slide3.jpg' %}" alt="logo"  class="img-reponsive">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock content %}</content>
 </body>
 </html>
